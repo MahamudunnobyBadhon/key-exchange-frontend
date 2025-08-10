@@ -6,7 +6,7 @@ body {
 }
 .App {
   display: flex;
-    flex-direction: column;
+  flex-direction: column;
     height: 100vh;
     max-width: 800px;
     margin: 0 auto;
@@ -37,7 +37,6 @@ body {
   background-color: #555;
   cursor: not-allowed;
 }
-
 .chat-window {
   flex-grow: 1;
   overflow-y: auto;
@@ -45,69 +44,68 @@ body {
   display: flex;
   flex-direction: column;
 }
-
 .message-container {
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
   max-width: 80%;
 }
-
 .message-container.sent {
   align-items: flex-end;
   align-self: flex-end;
 }
-
 .message-container.received {
   align-items: flex-start;
   align-self: flex-start;
 }
-
 .message-container.system {
   align-items: center;
   align-self: center;
-    font-style: italic;
+  font-style: italic;
     color: #8e8e93;
     max-width: 100%;
   }
-  
-  .message {
-    padding: 8px 12px;
-    border-radius: 18px;
-    line-height: 1.4;
-    word-wrap: break-word;
-  }
-  
-  .message-container.system .message {
-    background-color: transparent;
-  }
-  
-  .message-container.sent .message {
-    background-color: #0a84ff;
-    color: white;
-  }
-  
-  .message-container.received .message {
-    background-color: #3a3a3c;
+.message {
+  padding: 8px 12px;
+  border-radius: 18px;
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+.message-container.system .message {
+  background-color: transparent;
+}
+.message-container.sent .message {
+  background-color: #0a84ff;
+  color: white;
+}
+.message-container.received .message {
+  background-color: #3a3a3c;
   color: white;
 }
 .message strong {
-  display: block;
+  display: inline-block;
+    /* Changed */
+    padding: 2px 6px;
+    /* Added */
+    border-radius: 5px;
+    /* Added */
   font-size: 0.8em;
-  margin-bottom: 2px;
-  color: #aeb0b3;
+  margin-bottom: 4px;
+    /* Changed */
 }
-
 .message-container.sent .message strong {
-  color: #e0f7ff;
+  background-color: #0070d9;
+    /* Added */
 }
-
+.message-container.received .message strong {
+  background-color: #555;
+  /* Added */
+}
 .message-input {
   display: flex;
   padding: 10px;
   border-top: 1px solid #38383a;
 }
-
 .message-input input {
   flex-grow: 1;
   padding: 10px 15px;
